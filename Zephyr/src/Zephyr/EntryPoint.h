@@ -6,6 +6,10 @@ extern Zephyr::Application* Zephyr::CreateApplication();
 
 
 int main(int argc, char** argv) {
+
+	Zephyr::Log::Init();
+	ZP_CORE_WARN("Initialised Log");
+	ZP_CLIENT_INFO("Hello!");
 	printf("Zephyr Engine\n");
 	auto app = Zephyr::CreateApplication();
 	app->Run();

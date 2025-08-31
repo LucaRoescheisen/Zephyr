@@ -1,22 +1,945 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Zephyr">
+      <UniqueIdentifier>{272D32E1-13CF-5CB7-FC89-700BE8CAE307}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Zephyr\dependencies">
+      <UniqueIdentifier>{3DBCCBA5-A91D-A9B3-328B-EF659EEBDF72}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Zephyr\dependencies\include">
+      <UniqueIdentifier>{B0D0FB5F-1CDE-2946-A5C4-253111D1F5FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\GL">
+      <UniqueIdentifier>{12248B14-FE49-557B-E78F-DA46D3547A47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\GLFW">
+      <UniqueIdentifier>{EF79E463-DBCA-CFA5-042F-BE67F0DE620F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\KHR">
+      <UniqueIdentifier>{24B7EFA5-909A-FEE5-999D-2C220500C536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\glad">
+      <UniqueIdentifier>{B791F663-A3E2-E1A5-CC46-D067B8F6740F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\glm">
+      <UniqueIdentifier>{FF32F0A5-6B16-FFE5-7419-2D22E07BC536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\glm\detail">
+      <UniqueIdentifier>{E1F5B0DB-CD47-88CB-B666-C5DBA257A1B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\glm\ext">
+      <UniqueIdentifier>{DF1DDBB8-4BD7-4563-D436-603D40EFFBD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\glm\gtc">
+      <UniqueIdentifier>{CC25DBB8-38DF-4563-C13E-603D2DF7FBD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\glm\gtx">
+      <UniqueIdentifier>{E125DBB8-4DDF-4563-D63E-603D42F7FBD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\dependencies\include\glm\simd">
+      <UniqueIdentifier>{BB4646D4-A72D-08CC-507E-6EE93C448132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zephyr\src">
+      <UniqueIdentifier>{BE265E5B-AADE-9FA8-13E6-7804FFBC3A99}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SandboxApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="..\Zephyr\dependencies\include\GL\eglew.h">
+      <Filter>Zephyr\dependencies\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\GL\glew.h">
+      <Filter>Zephyr\dependencies\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\GL\glxew.h">
+      <Filter>Zephyr\dependencies\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\GL\wglew.h">
+      <Filter>Zephyr\dependencies\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\GLFW\glfw3.h">
+      <Filter>Zephyr\dependencies\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\GLFW\glfw3native.h">
+      <Filter>Zephyr\dependencies\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\KHR\khrplatform.h">
+      <Filter>Zephyr\dependencies\include\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glad\glad.h">
+      <Filter>Zephyr\dependencies\include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\common.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\_features.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\_fixes.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\_noise.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\_swizzle.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\_swizzle_func.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\_vectorize.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\compute_common.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\compute_vector_decl.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\compute_vector_relational.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\qualifier.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\setup.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_float.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_half.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat2x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat2x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat2x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat3x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat3x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat3x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat4x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat4x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_mat4x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_quat.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_vec1.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_vec2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_vec3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\detail\type_vec4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\exponential.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\_matrix_vectorize.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_clip_space.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_common.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double2x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double2x2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double2x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double2x3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double2x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double2x4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double3x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double3x2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double3x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double3x3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double3x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double3x4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double4x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double4x2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double4x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double4x3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double4x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_double4x4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float2x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float2x2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float2x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float2x3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float2x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float2x4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float3x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float3x2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float3x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float3x3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float3x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float3x4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float4x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float4x2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float4x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float4x3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float4x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_float4x4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int2x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int2x2_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int2x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int2x3_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int2x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int2x4_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int3x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int3x2_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int3x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int3x3_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int3x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int3x4_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int4x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int4x2_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int4x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int4x3_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int4x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_int4x4_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_integer.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_projection.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_relational.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_transform.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint2x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint2x2_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint2x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint2x3_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint2x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint2x4_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint3x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint3x2_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint3x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint3x3_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint3x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint3x4_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint4x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint4x2_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint4x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint4x3_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint4x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\matrix_uint4x4_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_common.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_double.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_double_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_exponential.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_float.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_float_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_geometric.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_relational.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_transform.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\quaternion_trigonometric.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_common.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_constants.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_int_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_integer.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_packing.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_reciprocal.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_relational.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_uint_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\scalar_ulp.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_bool1.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_bool1_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_bool2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_bool2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_bool3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_bool3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_bool4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_bool4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_common.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_double1.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_double1_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_double2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_double2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_double3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_double3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_double4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_double4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_float1.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_float1_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_float2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_float2_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_float3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_float3_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_float4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_float4_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_int1.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_int1_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_int2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_int2_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_int3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_int3_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_int4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_int4_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_integer.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_packing.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_reciprocal.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_relational.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_uint1.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_uint1_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_uint2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_uint2_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_uint3.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_uint3_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_uint4.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_uint4_sized.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\ext\vector_ulp.hpp">
+      <Filter>Zephyr\dependencies\include\glm\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\fwd.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\geometric.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\glm.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\bitfield.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\color_space.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\constants.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\epsilon.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\integer.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\matrix_access.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\matrix_integer.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\matrix_inverse.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\matrix_transform.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\noise.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\packing.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\quaternion.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\random.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\reciprocal.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\round.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\type_aligned.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\type_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\type_ptr.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\ulp.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtc\vec1.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\associated_min_max.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\bit.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\closest_point.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\color_encoding.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\color_space.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\color_space_YCoCg.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\common.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\compatibility.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\component_wise.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\dual_quaternion.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\easing.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\euler_angles.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\extend.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\extended_min_max.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\exterior_product.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\fast_exponential.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\fast_square_root.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\fast_trigonometry.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\functions.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\gradient_paint.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\handed_coordinate_space.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\hash.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\integer.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\intersect.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\io.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\log_base.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\matrix_cross_product.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\matrix_decompose.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\matrix_factorisation.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\matrix_interpolation.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\matrix_major_storage.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\matrix_operation.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\matrix_query.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\matrix_transform_2d.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\mixed_product.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\norm.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\normal.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\normalize_dot.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\number_precision.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\optimum_pow.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\orthonormalize.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\pca.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\perpendicular.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\polar_coordinates.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\projection.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\quaternion.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\range.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\raw_data.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\rotate_normalized_axis.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\rotate_vector.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\scalar_multiplication.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\scalar_relational.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\spline.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\std_based_type.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\string_cast.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\texture.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\transform.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\transform2.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\type_aligned.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\type_trait.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\vec_swizzle.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\vector_angle.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\vector_query.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\gtx\wrap.hpp">
+      <Filter>Zephyr\dependencies\include\glm\gtx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\integer.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat2x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat2x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat2x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat3x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat3x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat3x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat4x2.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat4x3.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\mat4x4.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\matrix.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\packing.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\common.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\exponential.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\geometric.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\integer.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\matrix.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\neon.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\packing.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\platform.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\trigonometric.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\simd\vector_relational.h">
+      <Filter>Zephyr\dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\trigonometric.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\vec2.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\vec3.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\vec4.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Zephyr\dependencies\include\glm\vector_relational.hpp">
+      <Filter>Zephyr\dependencies\include\glm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SandboxApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Zephyr\src\Zephyr">
+      <Filter>Zephyr\src</Filter>
+    </None>
   </ItemGroup>
 </Project>

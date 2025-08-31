@@ -1,36 +1,195 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="dependencies">
+      <UniqueIdentifier>{8CAD9F58-7810-2FFD-2196-67B30DD8FA7F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="dependencies\include">
+      <UniqueIdentifier>{FFA0974E-EB2F-2118-944E-351380BC31BE}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="dependencies\include\GL">
+      <UniqueIdentifier>{014680B3-6D7D-C84A-7687-2C6EE23DEF43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\include\GLFW">
+      <UniqueIdentifier>{9ED3A994-0A96-DD1E-5346-6CABBF47B6FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\include\KHR">
+      <UniqueIdentifier>{F3168923-DF3B-D8A3-0887-BD33F40AD7C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\include\glad">
+      <UniqueIdentifier>{66EBBB94-D2AD-EF1E-1B5E-7EAB875FC8FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\include\glm">
+      <UniqueIdentifier>{CE928923-BAB7-D8A3-E302-BE33CF86D7C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\include\glm\simd">
+      <UniqueIdentifier>{EADF6E36-56F8-5560-1FA5-E5F98B7CEAF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Zephyr">
+      <UniqueIdentifier>{5E06913E-4ABE-D28B-B3C5-ABE79F9C6D7C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Zephyr\Events">
+      <UniqueIdentifier>{821C1028-EE32-0EBE-37AA-99DFA3FFDE45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\imgui">
+      <UniqueIdentifier>{5D3BD0F0-499E-5F95-F223-984BDE652B18}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Zephyr\Core.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="dependencies\include\GL\eglew.h">
+      <Filter>dependencies\include\GL</Filter>
     </ClInclude>
-    <ClInclude Include="src\Zephyr\Application.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="dependencies\include\GL\glew.h">
+      <Filter>dependencies\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\GL\glxew.h">
+      <Filter>dependencies\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\GL\wglew.h">
+      <Filter>dependencies\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\GLFW\glfw3.h">
+      <Filter>dependencies\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\GLFW\glfw3native.h">
+      <Filter>dependencies\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\KHR\khrplatform.h">
+      <Filter>dependencies\include\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glad\glad.h">
+      <Filter>dependencies\include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\common.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\exponential.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\geometric.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\integer.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\matrix.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\neon.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\packing.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\platform.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\trigonometric.h">
+      <Filter>dependencies\include\glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\include\glm\simd\vector_relational.h">
+      <Filter>dependencies\include\glm\simd</Filter>
     </ClInclude>
     <ClInclude Include="src\Zephyr.h">
-      <Filter>Header Files</Filter>
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zephyr\Application.h">
+      <Filter>src\Zephyr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zephyr\Core.h">
+      <Filter>src\Zephyr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zephyr\Engine.h">
+      <Filter>src\Zephyr</Filter>
     </ClInclude>
     <ClInclude Include="src\Zephyr\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>src\Zephyr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zephyr\Events\Event.h">
+      <Filter>src\Zephyr\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zephyr\Events\EventQueue.h">
+      <Filter>src\Zephyr\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zephyr\Layer.h">
+      <Filter>src\Zephyr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Zephyr\Log.h">
+      <Filter>src\Zephyr</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zppch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imconfig.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_impl_glfw.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_impl_opengl3.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_impl_opengl3_loader.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_internal.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_rectpack.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_textedit.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_truetype.h">
+      <Filter>vendor\imgui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Zephyr\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src\Zephyr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Zephyr\Engine.cpp">
+      <Filter>src\Zephyr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Zephyr\Log.cpp">
+      <Filter>src\Zephyr</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glad.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zppch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_demo.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_impl_glfw.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_impl_opengl3.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp">
+      <Filter>vendor\imgui</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
