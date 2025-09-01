@@ -182,6 +182,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Zephyr\Zephyr.dll ..\bin\Dist-windows-x86_
     <ClInclude Include="src\Zephyr.h" />
     <ClInclude Include="src\Zephyr\Application.h" />
     <ClInclude Include="src\Zephyr\Core.h" />
+    <ClInclude Include="src\Zephyr\Editor UI\EditorUI.h" />
     <ClInclude Include="src\Zephyr\Engine.h" />
     <ClInclude Include="src\Zephyr\EntryPoint.h" />
     <ClInclude Include="src\Zephyr\Events\Event.h" />
@@ -189,11 +190,10 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Zephyr\Zephyr.dll ..\bin\Dist-windows-x86_
     <ClInclude Include="src\Zephyr\Layer.h" />
     <ClInclude Include="src\Zephyr\Log.h" />
     <ClInclude Include="src\zppch.h" />
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_opengl3.h" />
     <ClInclude Include="vendor\imgui\imconfig.h" />
     <ClInclude Include="vendor\imgui\imgui.h" />
-    <ClInclude Include="vendor\imgui\imgui_impl_glfw.h" />
-    <ClInclude Include="vendor\imgui\imgui_impl_opengl3.h" />
-    <ClInclude Include="vendor\imgui\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="vendor\imgui\imgui_internal.h" />
     <ClInclude Include="vendor\imgui\imstb_rectpack.h" />
     <ClInclude Include="vendor\imgui\imstb_textedit.h" />
@@ -201,6 +201,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Zephyr\Zephyr.dll ..\bin\Dist-windows-x86_
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Zephyr\Application.cpp" />
+    <ClCompile Include="src\Zephyr\Editor UI\EditorUI.cpp" />
     <ClCompile Include="src\Zephyr\Engine.cpp" />
     <ClCompile Include="src\Zephyr\Log.cpp" />
     <ClCompile Include="src\glad.c">
@@ -209,6 +210,12 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Zephyr\Zephyr.dll ..\bin\Dist-windows-x86_
     <ClCompile Include="src\zppch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_glfw.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_opengl3.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="vendor\imgui\imgui.cpp">
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -216,12 +223,6 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Zephyr\Zephyr.dll ..\bin\Dist-windows-x86_
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="vendor\imgui\imgui_draw.cpp">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="vendor\imgui\imgui_impl_glfw.cpp">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="vendor\imgui\imgui_impl_opengl3.cpp">
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="vendor\imgui\imgui_tables.cpp">

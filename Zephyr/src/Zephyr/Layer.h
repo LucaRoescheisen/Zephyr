@@ -84,17 +84,26 @@ namespace Zephyr {
 				});
 		}
 
-
-		void OnDetach() { ZP_CORE_TRACE("WindowLayer detached"); };
 		void OnAttach() { ZP_CORE_TRACE("WindowLayer attached"); }
+		void OnDetach() { ZP_CORE_TRACE("WindowLayer detached"); };
 	private:
 		GLFWwindow* m_Window;
 		bool m_PreviouslyFocused = true;
+
 		void OnWindowResize(WindowResize& ev) {
 			glfwSetWindowSize(m_Window, ev.GetWidth(), ev.GetHeight());
 		}
 
 		
+	};
+
+	class UILayer : public Layer {
+
+	public:
+		void OnAttach() { ZP_CORE_TRACE("UILayer attached"); };
+		void OnDetach() { ZP_CORE_TRACE("UILayer detached"); };
+
+
 	};
 
 

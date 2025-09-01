@@ -39,12 +39,17 @@ namespace Zephyr {
                 ZP_CORE_TRACE("GLAD and GLFW initialised");
             }
         
-  
+       
 
     }
 
+   // void Engine::InitUI() {
+    //    m_EditorUI.InitEditorUI();
+   // }
 
-
+   // void Engine::RenderUI() {
+   //     m_EditorUI.RenderEditorUI();
+   // }
 
 
 

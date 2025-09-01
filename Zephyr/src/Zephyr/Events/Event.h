@@ -8,7 +8,7 @@ namespace Zephyr {
 		WindowCloseEvent,
 		WindowResizeEvent,
 		WindowFocusEvent,
-		WindowLostFocusEvent,
+		WindowMinimiseEvent,
 		WindowMovedEvent,
 		AppTickEvent,
 		AppUpdateEvent,
@@ -40,8 +40,6 @@ namespace Zephyr {
 	
 
 
-
-
 	class ZEPHYR_API Event {
 	public:
 		virtual EventType GetEventType() const = 0;
@@ -62,8 +60,6 @@ namespace Zephyr {
 																			//			
 	public:																	//			
 		EventDispatcher(Event& event) : m_Event(event) {}					//					
-																			//
-													
 
 		template<typename T>
 		bool Dispatch(EventFn<T> func) {
@@ -88,7 +84,6 @@ namespace Zephyr {
 
 		bool IsCloseRequested() { return m_HandleClose; }
 
-
 		virtual unsigned int GetCategoryFlag() const override {
 			return EventCategoryWindow;
 		}
@@ -105,6 +100,27 @@ namespace Zephyr {
 	};
 
 
+	class WindowMinimise : public Event {
+	public:
+		WindowMinimise(int iconified)
+			: m_IsMinimised(iconified) {
+		}
+
+		EVENT_CLASS_TYPE(WindowMinimiseEvent);
+		unsigned int GetCategoryFlag() const override { return EventCategoryWindow; }
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "WindowMinimiseEvent " << m_IsMinimised;
+			return ss.str();
+		}
+
+	private:
+		int m_IsMinimised;
+	};
+
+
+
 	class WindowResize : public Event {
 	public:
 		WindowResize(unsigned int width, unsigned int height) : m_Width(width), m_Height(height) {}
@@ -114,11 +130,9 @@ namespace Zephyr {
 		unsigned int GetWidth() { return m_Width; }
 		unsigned int GetHeight() { return m_Height; }
 
-
 		virtual unsigned int GetCategoryFlag() const override {
 		return EventCategoryWindow;
 		}
-
 
 		std::string ToString() const override {
 			std::stringstream ss;
@@ -129,6 +143,7 @@ namespace Zephyr {
 	private:
 		unsigned int m_Width, m_Height;
 	};
+
 
 	class WindowFocus : public Event {
 	public:

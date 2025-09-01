@@ -21,15 +21,21 @@ project "Zephyr"
     pchheader "zppch.h"
     pchsource "Zephyr/src/zppch.cpp"
 
-    files {
-        "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp",
-        "%{prj.name}/src/**.c",
-        "Zephyr/dependencies/include/**.h",
-        "Zephyr/vendor/imgui/**.h",
-        "Zephyr/vendor/imgui/**.cpp"
-    }
-
+files {
+    "%{prj.name}/src/**.h",
+    "%{prj.name}/src/**.cpp",
+    "%{prj.name}/src/**.c",
+    "Zephyr/dependencies/include/**.h",
+    
+    "Zephyr/vendor/imgui/*.cpp",
+    "Zephyr/vendor/imgui/*.h",
+    
+    -- ImGui backends for GLFW + OpenGL only
+    "Zephyr/vendor/imgui/backends/imgui_impl_glfw.cpp",
+    "Zephyr/vendor/imgui/backends/imgui_impl_opengl3.cpp",
+    "Zephyr/vendor/imgui/backends/imgui_impl_glfw.h",
+    "Zephyr/vendor/imgui/backends/imgui_impl_opengl3.h"
+}
     includedirs {
         "Zephyr/vendor/imgui",
         "Zephyr/vendor/spdlog/include",
@@ -52,6 +58,11 @@ project "Zephyr"
         flags { "NoPCH" }
 
     filter {} 
+
+    filter "files:Zephyr/vendor/imgui/backends/*.cpp"
+        flags { "NoPCH" }
+
+    filter {}
 
     filter "files:Zephyr/src/glad.c"
         flags { "NoPCH" }

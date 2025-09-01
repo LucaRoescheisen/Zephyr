@@ -31,6 +31,9 @@
     <Filter Include="src\Zephyr">
       <UniqueIdentifier>{5E06913E-4ABE-D28B-B3C5-ABE79F9C6D7C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Zephyr\Editor UI">
+      <UniqueIdentifier>{B2609EA2-9EEF-276C-470E-3C67337C3812}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Zephyr\Events">
       <UniqueIdentifier>{821C1028-EE32-0EBE-37AA-99DFA3FFDE45}</UniqueIdentifier>
     </Filter>
@@ -39,6 +42,9 @@
     </Filter>
     <Filter Include="vendor\imgui">
       <UniqueIdentifier>{5D3BD0F0-499E-5F95-F223-984BDE652B18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\imgui\backends">
+      <UniqueIdentifier>{27CEAEAF-933A-6AAA-5C2E-0208C8598C12}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +111,9 @@
     <ClInclude Include="src\Zephyr\Core.h">
       <Filter>src\Zephyr</Filter>
     </ClInclude>
+    <ClInclude Include="src\Zephyr\Editor UI\EditorUI.h">
+      <Filter>src\Zephyr\Editor UI</Filter>
+    </ClInclude>
     <ClInclude Include="src\Zephyr\Engine.h">
       <Filter>src\Zephyr</Filter>
     </ClInclude>
@@ -126,19 +135,16 @@
     <ClInclude Include="src\zppch.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_glfw.h">
+      <Filter>vendor\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_opengl3.h">
+      <Filter>vendor\imgui\backends</Filter>
+    </ClInclude>
     <ClInclude Include="vendor\imgui\imconfig.h">
       <Filter>vendor\imgui</Filter>
     </ClInclude>
     <ClInclude Include="vendor\imgui\imgui.h">
-      <Filter>vendor\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="vendor\imgui\imgui_impl_glfw.h">
-      <Filter>vendor\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="vendor\imgui\imgui_impl_opengl3.h">
-      <Filter>vendor\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="vendor\imgui\imgui_impl_opengl3_loader.h">
       <Filter>vendor\imgui</Filter>
     </ClInclude>
     <ClInclude Include="vendor\imgui\imgui_internal.h">
@@ -158,6 +164,9 @@
     <ClCompile Include="src\Zephyr\Application.cpp">
       <Filter>src\Zephyr</Filter>
     </ClCompile>
+    <ClCompile Include="src\Zephyr\Editor UI\EditorUI.cpp">
+      <Filter>src\Zephyr\Editor UI</Filter>
+    </ClCompile>
     <ClCompile Include="src\Zephyr\Engine.cpp">
       <Filter>src\Zephyr</Filter>
     </ClCompile>
@@ -170,6 +179,12 @@
     <ClCompile Include="src\zppch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>vendor\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>vendor\imgui\backends</Filter>
+    </ClCompile>
     <ClCompile Include="vendor\imgui\imgui.cpp">
       <Filter>vendor\imgui</Filter>
     </ClCompile>
@@ -177,12 +192,6 @@
       <Filter>vendor\imgui</Filter>
     </ClCompile>
     <ClCompile Include="vendor\imgui\imgui_draw.cpp">
-      <Filter>vendor\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="vendor\imgui\imgui_impl_glfw.cpp">
-      <Filter>vendor\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="vendor\imgui\imgui_impl_opengl3.cpp">
       <Filter>vendor\imgui</Filter>
     </ClCompile>
     <ClCompile Include="vendor\imgui\imgui_tables.cpp">
