@@ -115,8 +115,12 @@ namespace Zephyr {
 			return ss.str();
 		}
 
+		int GetMinimisedState() {
+			return m_IsMinimised;
+		}
+
 	private:
-		int m_IsMinimised;
+		int m_IsMinimised;		//Is 1 if application is minimised
 	};
 
 
@@ -164,12 +168,109 @@ namespace Zephyr {
 			ss << "WindowFocusEvent " << m_Focused;
 			return ss.str();
 		}
-
 	private:
 		int m_Focused;
 		
 	};
 
+	//-----------------------------------------------Mouse Events--------------------------------------------------//
+	class MouseButton : public Event {
+	public:
+		int GetMouseButton() const { return m_MouseButton; }
+
+		virtual unsigned int GetCategoryFlag() const override {
+			return EventCategoryMouse | EventCategoryMouseButton;
+		}
+
+	protected:
+		MouseButton(int button) : m_MouseButton(button) {}
+		int m_MouseButton;
+	};
+
+	class MouseButtonPressed : public MouseButton {
+	public:
+		MouseButtonPressed(int mouseButton) : MouseButton(mouseButton) {}
+
+		EVENT_CLASS_TYPE(MouseButtonPressedEvent);
+
+		virtual unsigned int GetCategoryFlag() const override {
+			return EventCategoryMouseButton;
+		}
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "MousePressedEvent " << m_MouseButton;
+			return ss.str();
+		}
+
+	};
+
+	class MouseButtonReleased: public MouseButton {
+	public:
+		MouseButtonReleased(int mouseButton) : MouseButton(mouseButton) {}
+
+		EVENT_CLASS_TYPE(MouseButtonReleasedEvent);
+
+		virtual unsigned int GetCategoryFlag() const override {
+			return EventCategoryMouseButton;
+		}
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "MouseReleasedEvent " << m_MouseButton;
+			return ss.str();
+		}
+
+	};
+
+	//-------------------------------------Keyboard Events-------------------------------------//
+	class KeyButton : public Event {
+	public:
+		int GetKeyButton() const { return m_Key; };
+
+		virtual unsigned int GetCategoryFlag() const override {
+			return EventCategoryKeyboard;
+		}
+
+	protected:
+		KeyButton(int key) : m_Key(key) {}
+		int m_Key;
+	};
+
+
+	class KeyPressed : public KeyButton {
+	public:
+		KeyPressed(int keyButton) : KeyButton(keyButton) {}
+
+		EVENT_CLASS_TYPE(KeyPressedEvent);
+
+		virtual unsigned int GetCategoryFlag() const override {
+			return EventCategoryKeyboard;
+		}
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "KeyPressedEvent " << m_Key;
+			return ss.str();
+		}
+	};
+
+	class KeyReleased : public KeyButton {
+	public:
+		KeyReleased(int keyButton) : KeyButton(keyButton) {}
+
+		EVENT_CLASS_TYPE(KeyReleasedEvent);
+
+		virtual unsigned int GetCategoryFlag() const override {
+			return EventCategoryKeyboard;
+		}
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "KeyReleasedEvent " << m_Key;
+			return ss.str();
+		}
+	};
 
 }
 

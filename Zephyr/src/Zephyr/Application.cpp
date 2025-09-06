@@ -4,37 +4,48 @@
 #include "Log.h"
 
 #include "zppch.h"
-
-namespace Zephyr {
-	#define SET_GLFW_CALLBACK(window, callbackFn, EventExpr)\
+#define SET_GLFW_CALLBACK(window, callbackFn, EventExpr)\
 		callbackFn(window, [](GLFWwindow* win, auto... args){\
 			Application* app = static_cast<Application*>(glfwGetWindowUserPointer(win)); \
 			app->OnEvent(EventExpr(args...)); \
 		});
-	
+
+
+
+namespace Zephyr {
+
 
 
 	void Application::Run() {	
 		m_Engine.InitWindow(m_Window, 1920, 1080, "Zephyr");
-		m_Engine.InitUI(m_Window);
 		glfwSetWindowUserPointer(m_Window, this);
-
+		m_EditorUI.InitEditorUI(m_Window);
 		//Set glfwCallbacks
 		SetGLFWCallbacks();
-		m_LayerStack.PushOverlay(new WindowLayer(m_Window));
-		m_LayerStack.PushOverlay(new UILayer());
+
+		WindowLayer* windowLayer = new WindowLayer(m_Window, m_Engine, m_EditorUI);
+		UILayer* uiLayer = new UILayer();
+
+		m_LayerStack.PushOverlay(windowLayer);
+		m_LayerStack.PushOverlay(uiLayer);
 
 		while (m_Running) {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			ImGui_ImplOpenGL3_NewFrame();
+			ImGui_ImplGlfw_NewFrame();
+			ImGui::NewFrame();
 			//find deltatime
 
 			//update input
 			//update renderer
-			m_Engine.RenderUI();
-			//render
 
-			glfwSwapBuffers(m_Window);
 			glfwPollEvents();
+			m_EditorUI.RenderEditorUI();
+
+			//render
+			
+			glfwSwapBuffers(m_Window);
+
 			
 		}
 	}
@@ -67,10 +78,30 @@ namespace Zephyr {
 		SET_GLFW_CALLBACK(m_Window, glfwSetWindowSizeCallback, WindowResize);
 		SET_GLFW_CALLBACK(m_Window, glfwSetWindowCloseCallback, [](auto...) { return WindowClose(true); });
 		SET_GLFW_CALLBACK(m_Window, glfwSetWindowFocusCallback, WindowFocus);	
+		SET_GLFW_CALLBACK(m_Window, glfwSetWindowIconifyCallback, [](int iconified) {return WindowMinimise(iconified == GLFW_TRUE);});
+		
+		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* win, int button, int action, int mod) {
+			Application* app = static_cast<Application*>(glfwGetWindowUserPointer(win));
+			if (ImGui_ImplGlfw_MouseButtonCallback)
+				ImGui_ImplGlfw_MouseButtonCallback(win, button, action, mod);
+
+			if (action == GLFW_PRESS) {
+				app->OnEvent(MouseButtonPressed(button));
+			}
+			else if (action == GLFW_RELEASE) {
+				app->OnEvent(MouseButtonReleased(button));
+			}
+			});
+
+		glfwSetKeyCallback(m_Window, [](GLFWwindow* win, int key, int scanCode, int action, int mod) {
+			Application* app = static_cast<Application*>(glfwGetWindowUserPointer(win));
+			if (action == GLFW_PRESS) {
+				app->OnEvent(KeyPressed(key));
+			}
+			else if (action == GLFW_RELEASE) {
+				app->OnEvent(KeyReleased(key));
+			}
+			
+			});
 	}		
-
-
-
-
-
 }

@@ -10,16 +10,17 @@ namespace Zephyr {
 	public:
 		void InitWindow(GLFWwindow*& window, int width, int height, const char* name);
 		static void ErrorCallback(int error, const char* description);
-		void InitUI(GLFWwindow* window) {
-			m_EditorUI.InitEditorUI(window);
-		
-		}
-		void RenderUI() {
-			m_EditorUI.RenderEditorUI();
+
+		void OnMinimiseEvent(int isAppMinimised) {
+			if (isAppMinimised) { ZP_CORE_TRACE("Application is minimised: Rendering Stopped"); }
+			else { ZP_CORE_TRACE("Application is not minimised: Rendering Started"); }
+			m_ShouldRender = isAppMinimised;
 		}
 
+
 	private:
-		EditorUI m_EditorUI;
+		uint8_t m_ShouldRender = 1;
+
 	};
 
 }

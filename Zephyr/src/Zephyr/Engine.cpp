@@ -43,15 +43,5 @@ namespace Zephyr {
 
     }
 
-   // void Engine::InitUI() {
-    //    m_EditorUI.InitEditorUI();
-   // }
-
-   // void Engine::RenderUI() {
-   //     m_EditorUI.RenderEditorUI();
-   // }
-
-
-
 
 }

@@ -12,6 +12,9 @@ namespace Zephyr {
 	class ZEPHYR_API Application
 	{
 	public:
+		Application() {
+			
+		}
 		void Run();
 		void OnEvent(Event& e);
 		void SetVSync(bool enabled) { 
@@ -26,6 +29,7 @@ namespace Zephyr {
 		GLFWwindow* m_Window = nullptr;
 		LayerStack m_LayerStack;
 		Engine m_Engine;
+		EditorUI m_EditorUI;
 		bool m_VSync = true;
 		bool m_Running = true;
 		
@@ -46,7 +50,7 @@ namespace Zephyr {
 
 
 
-} // namespace Zephyr
+} 
 
 
 
